@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logoutUser()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>
+        Categories
+        <ion-icon class="end-button" name="add-outline" (click)="addCategory()"></ion-icon>
+      </ion-label>
+    </ion-item>
+
+    <ion-item *ngFor="let cat of categories;">
+      <ui-label [text]="cat.title"></ui-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editCategory(cat.key)">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteCategory(cat.key)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

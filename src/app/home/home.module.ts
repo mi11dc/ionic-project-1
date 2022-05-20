@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { HomeService } from './_core/_services/home.service';
-import { UiSharedModule } from 'Shared';
+import { UiSharedModule } from 'Shared/dist';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 
